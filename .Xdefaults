@@ -1,0 +1,266 @@
+Xcursor.theme: ComixCursors-Black-Regular
+
+urxvt*font:             xft:Liberation Mono:antialias=true:pixelsize=10
+!urxvt*font:             xft:FreeMono:style=medium:antialias=true:pixelsize=10
+!urxvt*font:             xft:Inconsolata:antialias=true:pixelsize=10
+!urxvt*font:             xft:Bitstream Vera Sans Mono:pixelsize=12
+urxvt*termName:         rxvt
+urxvt*background:       #DDDDDD
+urxvt*foreground:       #222222
+urxvt*scrollBar:        false
+urxvt*perl-lib:         /usr/lib/urxvt/perl/
+!urxvt*perl-ext-common:  default,matcher,tabbed,searchable-scrollback
+urxvt*perl-ext-common:  default,matcher,searchable-scrollback
+urxvt*urlLauncher:      /bin/bin/firefox
+urxvt*matcher.button:   1
+#urxvt*fading:           50
+#urxvt*fadeColor:        #000000
+URxvt.transparent:   true
+#URxvt.tintColor:     #dcdcdc
+URxvt.shading:       165
+URxvt.geometry:		80x20
+URxvt.tabbed.tabbar-fg: 8
+URxvt.tabbed.tabbar-bg: -1
+URxvt.tabbed.tab-fg: 1
+URxvt.tabbed.tab-bg: -1
+
+
+Xft*dpi:                120
+Xft*antialias:          true
+Xft*hinting:            full
+
+
+xterm*title: xterm
+xterm*faceName: terminus:pixelsize=12
+!xterm*faceName: cure:Regular
+!xterm*boldfaceName: cure:Regular
+!xterm*faceName: Pragmata
+!xterm*faceSize: 8.7
+!xterm*boldfaceName: Pragmata
+xterm*geometry: 100x30
+!xterm*boldMode: false
+xterm*cutNewline: false
+xterm*on4Clicks: group
+xterm*on5Clicks: page
+xterm*internalBorder: 1
+!xterm*background: #262729
+xterm*background: white
+xterm*foreground: black
+xterm*metaSendsEscape: true
+xterm*colorBD: #ffffff
+xterm*colorBDMode: false
+xterm*cursorBlink: false
+xterm*cursorColor: #e2baf1
+!xterm*veryBoldColors: 14
+xterm*dynamiccolors: true
+xterm*utf8: 1
+xterm*loginShell: true
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
+xterm*jumpScroll: true
+xterm*multiScroll: true
+xterm*saveLines: 512
+
+
+
+!-------------------------------------------------------------------------------
+! {{{ Colours
+
+! tangoesque scheme
+!*background:  #222222
+!*foreground:  #aaaaaa
+! Black
+*color0:      #000000
+*color8:      #555753
+! Red
+*color1:      #ff6565
+*color9:      #ff8d8d
+! Green
+*color2:      #93d44f
+*color10:     #c8e7a8
+! Yellow
+*color3:      #eab93d
+*color11:     #ffc123
+! Blue
+*color4:      #204a87
+*color12:     #3465a4
+! Mangenta
+*color5:      #ce5c00
+*color13:     #f57900
+! Cyan 
+*color6:      #89b6e2
+*color14:     #46a4ff
+! White
+*color7:      #cccccc
+*color15:     #eeeeee
+
+
+
+! Be Yourself
+! Black
+!*color0: #313131
+!*color8: #5b5b5b
+! Red
+!*color1: #de4552
+!*color9: #de6e77
+! Green
+!*color2: #8aa235
+!*color10: #a0b45a
+! Yellow
+!*color3: #e97d18
+!*color11: #e99c54
+! Blue
+!*color4: #4b7276
+!*color12: #79b8be
+! Purple
+!*color5: #6f2861
+!*color13: #cf4eb5
+! Cyan
+!*color6: #4db9d7
+!*color14: #77d7e7
+!*color14: #46a4ff
+! White
+!*color7: #a9a9a9
+!*color15: #e0e0e0
+
+!bitchin
+!*foreground: #DDEEDD
+!*background: #1C1C1C
+
+!black
+!*color0: #1C1C1C
+!*color8: #4d4d4d
+!red
+!*color1: #D81860
+!*color9: #F00060
+!green
+!*color2: #B7CE42
+!*color10: #BDE077
+!yellow
+!*color3: #FEA63C
+!*color11: #FFE863
+!blue
+!*color4:  #a0c2de
+!*color12: #c9dee8
+!magenta
+!*color5: #B7416E
+!*color13: #BB4466
+!cyan
+!*color6: #5E7175
+!*color14: #A3BABF
+!white
+!*color7: #DDDDDD
+!*color15: #EEEEEE
+
+
+! Not4awesome
+!*background:       #222222
+!*foreground:       #cacaca
+!black
+!*color0:           #080808
+!*color8:           #505050
+!red
+!*color1:           #b04020
+!*color9:           #dd4010
+!green
+!*color2:           #afd700
+!*color10:          #daff30
+!yellow
+!*color3:           #f7cf0a
+!*color11:          #fce70d
+!blue
+!*color4:           #3060aa
+!*color12:          #6099dd
+!magenta
+!*color5:           #d6156c
+!*color13:          #fe4365
+!cyan
+!*color6:           #a0c2de
+!*color14:          #c9dee8
+!white
+!*color7:           #b0b0b0
+!*color15:          #e0e0e0
+
+
+!black
+!*color0: #000000
+!*color8: #505050
+!red
+!*color1: #D81860
+!*color9: #F00060
+!green
+!*color2: #B7CE42
+!*color10: #BDE077
+!*color2: #950040
+!*color10: #ff0080
+!yellow
+!*color3: #ffc62c
+!*color11: #ffef63
+!blue
+!*color4: #1b669f
+!*color12: #65a7da
+!magenta
+!*color5: #a0c2de
+!*color13: #c9dee8
+!cyan
+!*color6: #4db9d7
+!*color14: #77d7e7
+!white
+!*color7: #b0b0b0
+!*color15: #cecece
+
+!---------purple and blue
+!black
+!*color0: #000000
+!*color8: #505050
+!red
+!*color1: #860e91
+!*color9: #a459b7
+!yellow
+!*color3: #B7CE42
+!*color11: #BDE077
+!green
+!*color2: #7419ba
+!*color10: #934ec8
+!blue
+!*color4: #1b669f
+!*color12: #65a7da
+!magenta
+!*color5: #a0c2de
+!*color13: #c9dee8
+!cyan
+!*color6: #4db9d7
+!*color14: #77d7e7
+!white
+!*color7: #b0b0b0
+!*color15: #cecece
+
+!---------orange and red
+*background:       #dadada
+*foreground:       #1a1a1a
+!black
+*color0: #000000
+*color8: #303030
+!red
+*color1: #f23404
+*color9: #f24b25
+!green
+*color2: #169637
+*color10: #2bd461
+!yellow//burnt orange
+*color3: #f24b11
+*color11: #f8784c
+!blue
+*color4: #921500
+*color12: #cd1d00
+!*color4: #197955
+!*color12: #3ccb94
+!magenta
+*color5: #404040
+*color13: #606060
+!cyan
+*color6: #f23400
+*color14: #f24d24
+!white
+*color7: #b0b0b0
+*color15: #efefef
+! }}}
