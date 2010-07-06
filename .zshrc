@@ -57,6 +57,7 @@ export NC=$'%{\e[0m%}'
 export yellow=$'%{\e[0;33m%}'
 export YELLOW=$'%{\e[1;33m%}'
 
+export EDITOR=vim
 
 
 alias ls="ls -b --color=auto --file-type -h"
@@ -68,9 +69,10 @@ alias x="extract"
 alias dvd="xine --auto-play --auto-scan dvd"
 alias walls="nitrogen ~/Pictures/walls"
 alias screenshot="scrot '%Y-%m-%d.png' -q 60"
-alias alleyoop="~/bin/alleyoop-0.9.5/src/alleyoop"
 alias Ss="pacman -Ss"
 alias todo="vim ~/.todo"
+alias e="gvim"
+
 
 ## For updating clock
 #TMOUT=10
@@ -79,13 +81,8 @@ alias todo="vim ~/.todo"
 #	zle reset-prompt
 #}
 
-gitb() {echo "$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')"}
 ## for Git
-git_branch_info() {
-  #gitb=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')
-  ref=$(git-symbolic-ref HEAD 2> /dev/null) || return
-  echo "(${ref#refs/heads/})"
-}
+gitb() {echo "$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')"}
 autoload -U colors
 colors
 setopt prompt_subst
@@ -98,43 +95,37 @@ RPROMPT='${blue}$(gitb)${NC}' # prompt for right side of screen
 
 
 
-#export $TERM=xterm
-
-
-
-
 # extract archives -- usage: extract <file>
 extract () {
-     if [ "$1" = "" ] || [ "$1" = "-h" ]; then 
-         echo -e "${blue}Usage:$NC x <file>";
-         echo -e "Extracts <file>";
-         return 1
-     fi
-     for file in "$@" 
-     do
-     	if [ -f $file ] ; then
-           case $file in
-                *.tar.bz2)   tar xjf $file        ;;
-                *.tar.gz)    tar xzf $file     ;;
-		*.tbz2)      tar xjf $file      ;;
-                *.tgz)       tar xzf $file       ;;
-		*)
-         	   case $(file -bi $file) in
-             		application/x-bzip2)       	bunzip2 $file 		;;
-             		application/rar)       		unrar x $file 		;;
-             		application/x-gzip)        	gunzip $file     	;;
-             		application/x-tar)       	tar xf $file        	;;
-             		application/zip)       		unzip $file     	;;
-            		application/x-compressed)       uncompress $file  	;;
-             		application/x-7z-compressed)    7z x $file    		;;
-             		*) echo -e "${RED}Error:$NC No rule how to extract \"$file\" ($(file -bi $file))" ;;
-         	   esac
-		;;
-    	   esac
-     	else
-         	echo -e "${RED}Error:$NC \"$file\" doesn't exist"
-     	fi
-     done
+	if [ "$1" = "" ] || [ "$1" = "-h" ]; then 
+		echo -e "${blue}Usage:$NC x <file>";
+		echo -e "Extracts <file>";
+		return 1
+	fi
+	for file in "$@" do
+		if [ -f $file ] ; then
+			case $file in
+			*.tar.bz2)	tar xjf $file	;;
+			*.tar.gz)	tar xzf $file	;;
+			*.tbz2)		tar xjf $file	;;
+			*.tgz)		tar xzf $file	;;
+			*)
+			case $(file -bi $file) in
+			application/x-bzip2)		bunzip2 $file		;;
+			application/rar)		unrar x $file		;;
+			application/x-gzip)		gunzip $file		;;
+			application/x-tar)		tar xf $file		;;
+			application/zip)		unzip $file		;;
+			application/x-compressed)	uncompress $file	;;
+			application/x-7z-compressed)	7z x $file		;;
+			*) echo -e "${RED}Error:$NC No rule how to extract \"$file\" ($(file -bi $file))" ;;
+			esac
+			;;
+			esac
+		else
+			echo -e "${RED}Error:$NC \"$file\" doesn't exist"
+		fi
+	done
 }
 
 

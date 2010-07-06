@@ -91,7 +91,6 @@ fadeLogHook = fadeInactiveLogHook fadeAmount
 myStartupHook' = do
 --	spawn "xsetroot -cursor_name left_ptr"
 --	spawn "nitrogen --restore"
---	spawn "/home/anomaly/.xmonad/autostart.sh"
  return ()
 
 
@@ -159,7 +158,7 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- launching and killing programs
     [ ((modMask,               xK_Return     ), spawn $ XMonad.terminal conf)
     , ((modMask .|. shiftMask, xK_Return     ), spawn "urxvtc -pe tabbed")
-    , ((modMask,               xK_d     ), spawn "dmenu_run -fn \"-*-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*\" -nb \"#111111\" -nf \"#c9dee8\" -sb \"#cccccc\" -sf \"#111111\"")
+    , ((modMask,               xK_d     ), spawn "dmenu_run -fn \"-*-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*\" -nb \"#eeeeee\" -nf \"#555555\" -sb \"#eeeeee\" -sf \"#000000\"")
     , ((modMask .|. shiftMask, xK_f     ), spawn "firefox")
     , ((modMask .|. shiftMask, xK_g     ), spawn "thunar")
     , ((modMask .|. shiftMask, xK_c     ), kill)
@@ -188,8 +187,8 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask .|. shiftMask, xK_n    ), windows W.swapUp    )
  
     -- increase or decrease number of windows in the master area
-    , ((modMask,							xK_comma     ), sendMessage (IncMasterN 1))
-    , ((modMask, 							xK_period     ), sendMessage (IncMasterN (-1)))
+    , ((modMask,		xK_comma     ), sendMessage (IncMasterN 1))
+    , ((modMask,		xK_period     ), sendMessage (IncMasterN (-1)))
  
     -- resizing
     , ((modMask,               xK_h     ), sendMessage Shrink)
@@ -209,7 +208,7 @@ keys' conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
     -- misc controls
     , ((modMask .|. controlMask, xK_a     ), spawn "slock")
-
+		-- stuff from old keyboard
 		-- mpd controls via keyboard media buttons
 		-- set according to xmodmap -pk
 		--, ((0,											0x1008ff12), spawn "amixer set Master toggle")
