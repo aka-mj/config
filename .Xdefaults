@@ -1,45 +1,64 @@
+! --- Xcursor -------------------------
 Xcursor.theme: ComixCursors-Black-Regular
 
-urxvt*font:             xft:Liberation Mono:antialias=true:pixelsize=10
-!urxvt*font:             xft:FreeMono:style=medium:antialias=true:pixelsize=10
-!urxvt*font:             xft:Inconsolata:antialias=true:pixelsize=10
-!urxvt*font:             xft:Bitstream Vera Sans Mono:pixelsize=12
+! --- Fonts ---------------------------
+urxvt*font:	xft:Liberation Mono:style=Regular:antialias=true:pixelsize=10
+urxvt*boldFont:	xft:Liberation Mono:style=Bold:antialias=true:pixelsize=10
+!urxvt*font:	xft:FreeMono:style=medium:antialias=true:pixelsize=10
+!urxvt*font:	xft:Inconsolata:antialias=true:pixelsize=10
+!urxvt*font:	xft:Bitstream Vera Sans Mono:pixelsize=12
 
-urxvt*termName:         rxvt
-urxvt*background:       #DDDDDD
-urxvt*foreground:       #222222
-URxvt.tabbed.tabbar-fg: 8
-URxvt.tabbed.tabbar-bg: -1
-URxvt.tabbed.tab-fg: 1
-URxvt.tabbed.tab-bg: -1
-
-urxvt*scrollBar:        false
-urxvt*perl-lib:         /usr/lib/urxvt/perl/
-!urxvt*perl-ext-common:  default,matcher,tabbed,searchable-scrollback
-urxvt*perl-ext-common:  default,matcher,searchable-scrollback
-urxvt*urlLauncher:      /bin/bin/firefox
-urxvt*matcher.button:   1
-
-!urxvt*fading:           50
-!urxvt*fadeColor:        #444444
-URxvt.transparent:   true
-!URxvt.tintColor:     #dcdcdc
-URxvt.shading:       165
-URxvt.geometry:		80x20
-
-
-Xft*dpi:                120
-Xft*antialias:          true
-Xft*hinting:            full
-
-
-xterm*title: xterm
 xterm*faceName: terminus:pixelsize=12
-!xterm*faceName: cure:Regular
-!xterm*boldfaceName: cure:Regular
-!xterm*faceName: Pragmata
-!xterm*faceSize: 8.7
-!xterm*boldfaceName: Pragmata
+!xterm*faceName:	cure:Regular
+!xterm*boldfaceName:	cure:Regular
+!xterm*faceName:	Pragmata
+!xterm*faceSize:	8.7
+!xterm*boldfaceName:	Pragmata
+
+! --- Xft -----------------------------
+Xft*dpi:		120
+Xft*rgba:		rgb
+Xft*antialias:		true
+Xft*hinting:		true
+!Xft*hinting:full
+Xft*lcdfilter:		lcddefault
+Xft*hintstyle:		hintfull
+
+
+! --- Urxvt ---------------------------
+URxvt*termName:		rxvt
+URxvt*saveLines:	3000
+!URxvt*background:	#555555
+!URxvt*foreground:	#BBBBBB
+URxvt*tabbed.tabbar-fg:	8
+URxvt*tabbed.tabbar-bg:	-1
+URxvt*tabbed.tab-fg:	1
+URxvt*tabbed.tab-bg:	-1
+
+URxvt*fading:		10
+!URxvt*fadeColor:	#444444
+URxvt*transparent:	true
+!URxvt*tintColor:	#444444
+URxvt*shading:		15
+!URxvt*depth:		32
+URxvt*buffered:		true
+URxvt*inheritPixmap:	true
+
+
+URxvt*geometry:		80x20
+URxvt*scrollBar:	false
+URxvt*perl-lib:		/usr/lib/urxvt/perl/
+!Urxvt*perl-ext-common:	default,matcher,tabbed,searchable-scrollback
+URxvt*perl-ext-common:	default,matcher,searchable-scrollback
+URxvt*urlLauncher:	/bin/bin/firefox
+URxvt*matcher.button:	1
+URxvt*colorUL:		#aa68e1
+URxvt*pointerBlank:	true
+URxvt*loginShell:	false
+
+
+! --- Xterm ---------------------------
+xterm*title: xterm
 xterm*geometry: 100x30
 !xterm*boldMode: false
 xterm*cutNewline: false
@@ -47,10 +66,10 @@ xterm*on4Clicks: group
 xterm*on5Clicks: page
 xterm*internalBorder: 1
 !xterm*background: #262729
-xterm*background: white
-xterm*foreground: black
+!xterm*background: grey
+!xterm*foreground: white
 xterm*metaSendsEscape: true
-xterm*colorBD: #ffffff
+xterm*colorBD: #222222
 xterm*colorBDMode: false
 xterm*cursorBlink: false
 xterm*cursorColor: #e2baf1
@@ -64,29 +83,24 @@ xterm*multiScroll: true
 xterm*saveLines: 512
 
 
-*background:       #dadada
-*foreground:       #1a1a1a
-!black
-*color0: #000000
-*color8: #303030
-!red
-*color1: #f23404
-*color9: #f24b25
-!green
-*color2: #169637
-*color10: #2bd461
-!yellow//burnt orange
-*color3: #f24b11
-*color11: #f8784c
-!blue
-*color4: #921500
-*color12: #cd1d00
-!magenta
-*color5: #404040
-*color13: #606060
-!cyan
-*color6: #f23400
-*color14: #f24d24
-!white
-*color7: #b0b0b0
-*color15: #efefef
+! --- Colors --------------------------
+*background:       #393939
+*foreground:       #bababa
+
+!#include "/home/anomaly/.colorscheme/red_orange_light"
+!#include "/home/anomaly/.colorscheme/be_yourself"
+!#include "/home/anomaly/.colorscheme/bitchin"
+!#include "/home/anomaly/.colorscheme/not4awesome"
+!#include "/home/anomaly/.colorscheme/skyplum"
+!#include "/home/anomaly/.colorscheme/tangoesque"
+!#include "/home/anomaly/.colorscheme/derp"
+!#include "/home/anomaly/.colorscheme/digerati"
+!#include "/home/anomaly/.colorscheme/flashy"
+!#include "/home/anomaly/.colorscheme/middling"
+!#include "/home/anomaly/.colorscheme/miro"
+!#include "/home/anomaly/.colorscheme/necromancer"
+!#include "/home/anomaly/.colorscheme/rezza"
+!#include "/home/anomaly/.colorscheme/rydgel"
+!#include "/home/anomaly/.colorscheme/thayer"
+!#include "/home/anomaly/.colorscheme/zenburn"
+#include "/home/anomaly/.colorscheme/dream"

@@ -59,8 +59,8 @@ main = do
               { workspaces = [" eax ", " ebx ", " ecx ", " edx "]
               , modMask = mod1Mask
               , borderWidth = 1
-              , normalBorderColor = "#eeeeee"
-              , focusedBorderColor = "#bbbbbb"--"#B7CE42"
+              , normalBorderColor = "#222222"
+              , focusedBorderColor = "#444444"--"#B7CE42"
               , terminal = "urxvtc"
               , keys = keys'
               , logHook = logHook' h  >> (fadeLogHook)
@@ -74,10 +74,10 @@ logHook' :: Handle ->  X ()
 logHook' h = dynamicLogWithPP $ customPP { ppOutput = hPutStrLn h }
 
 customPP :: PP
-customPP = defaultPP { ppCurrent = xmobarColor "#f23403" "#eeeeee". wrap "" ""
+customPP = defaultPP { ppCurrent = xmobarColor "#222222" "#888888". wrap "" ""
                      , ppTitle =  shorten 80
-                     , ppSep =  "<fc=#f23400> // </fc>"
-                     , ppHiddenNoWindows = xmobarColor "#aaaaaa" ""
+                     , ppSep =  "<fc=#aaaaaa> // </fc>"
+                     , ppHiddenNoWindows = xmobarColor "#333333" ""
                      , ppUrgent = xmobarColor "#AFAFAF" "#333333" . wrap "!" ""
                      }
                      

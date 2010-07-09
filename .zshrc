@@ -72,7 +72,7 @@ alias screenshot="scrot '%Y-%m-%d.png' -q 60"
 alias Ss="pacman -Ss"
 alias todo="vim ~/.todo"
 alias e="gvim"
-
+alias ct="ruby ~/bin/rcolor.rb; echo ""; sh ~/bin/colortest.sh"
 
 ## For updating clock
 #TMOUT=10
@@ -88,7 +88,7 @@ colors
 setopt prompt_subst
 
 #PROMPT='${PURPLE}%n${NC}${green}%m${NC} ${white}%~${NC} ${CYAN}>>${NC} '
-PROMPT='${PURPLE}%n${NC} ${PURPLE}%~${NC} ${CYAN}>>${NC} '
+PROMPT='${GREEN}%n${NC} ${YELLOW}%~${NC} ${BLUE}>>${NC} '
 RPROMPT='${blue}$(gitb)${NC}' # prompt for right side of screen
 
 #export PS2="$(print '%{\e[0;34m%}>%{\e[0m%}')"
@@ -102,7 +102,8 @@ extract () {
 		echo -e "Extracts <file>";
 		return 1
 	fi
-	for file in "$@" do
+	for file in "$@" 
+	do
 		if [ -f $file ] ; then
 			case $file in
 			*.tar.bz2)	tar xjf $file	;;

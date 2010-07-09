@@ -1,0 +1,13 @@
+Config { font = "xft:gelly-10"
+       , bgColor = "#222222"
+       , fgColor = "#555555"
+       , position = Top
+       , lowerOnStart = True
+       , commands = [ Run Date "%A, %d %b <fc=#888888>%l:%M:%S</fc>" "date" 10
+                    , Run Com "cat"  ["/home/anomaly/bin/xmobar-weather.txt"] "weather" 6000
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{  <fc=#888888>%weather%</fc>  %date% "
+       }
